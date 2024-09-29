@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ACC6C7;
+    line-height: 1.6;
+}
+
+/* Full-width Navigation Bar */
+header {
+    background-color: cadetblue;
+    padding: 2vh 0;
+    width: 100vw;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1.5vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+    padding: 1.5vh 2vw;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ACC6C7;
+    border-radius: 5px;
+}
+
+/* General Sections */
+section {
+    padding: 2vh 2vw;
+    max-width: 90vw;
+    margin: 2.5vh auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+h1, h2 {
+    font-size: 3.5vh;
+    margin-bottom: 0.5vh;
+    color: #333;
+    text-align: center;
+}
+
+h1{
+    background-color: cadetblue;
+    color: #fff;
+}
+
+/* About Me Section */
+.about-container {
+    width: 80vw;
+    margin: 1vh 2vw;
+    padding: 3vh 3vw;
+ 
+    
+    overflow: hidden; /* Ensure clearing after floats */
+}
+
+/* Float introduction box to the left */
+.about-text {
+    float: left;
+    width: 35vw; 
+    height : 58vh;
+    padding: 2vh 2vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Float photograph to the right */
+.about-photo {
+    float: right;
+    width: 38vw; /* 40% of the section width */
+    padding: 2vh 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.about-photo img {
+    width: 25vw;
+    height: 35vh;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Style for the "Let's connect" button */
+.connect-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 1.5vh 3vw;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    display: inline-block;
+    margin-top: 2vh; /* Space above the button */
+}
+
+.connect-btn:hover {
+    background-color: #ff6347;
+}
+
+/* Clear float after the section */
+.about-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Services Section */
+.services-container {
+    width: 80vw; /* Consistent with other sections */
+    margin: 2vh auto;
+    
+    overflow: hidden; /* Clear floats */
+}
+
+/* Float each service box */
+.service-box {
+    float: left;
+    width: 23vw; /* Use viewport width instead of percentages */
+    height : 50vh;
+    margin: 1vh 1.5vw; /* Spacing between the boxes */
+    background-color: #fff;
+    padding: 2vh 1vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-box img {
+    width: 100%;
+    height: 15vh; /* Adjusted height using viewport height */
+    object-fit: cover;
+    margin-bottom: 1vh;
+}
+
+/* Clear floats after the services section */
+.services-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+//* Experience Section */
+.experience-container {
+    width: 80vw; /* Same width as other sections */
+    margin: 5vh auto;
+    padding: 3vh 0;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Align h2 to the left extreme */
+.experience-container h2 {
+    text-align: left;  /* Align the heading to the left */
+    margin-left: 0;    /* Remove any left margin */
+    padding-left: 0;   /* Remove left padding */
+    font-size: 3.5vh;  /* Consistent font size */
+    color: #333;
+    margin-bottom: 1vh; /* Space below the heading */
+}
+
+/* Experience box styling */
+.experience-box {
+    width: 100%; /* Full width inside the container */
+    margin-bottom: 3vh; /* Space between experience entries */
+    padding: 2vh 2vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Image for each experience entry */
+.experience-img {
+    width: 8vw;
+    height: 8vw;
+    object-fit: cover;
+    border-radius: 10px;
+    float: left;
+    margin-right: 2vw;
+}
+
+/* Text for each experience entry */
+.experience-text {
+    overflow: hidden;
+    text-align: left; /* Ensure text aligns left */
+}
+
+/* Projects Section */
+.projects-container {
+    width: 100vw; /* Full viewport width */
+    margin: 1vh auto;
+    padding: 1vh 0;
+    overflow: hidden; /* Clear floats */
+}
+
+/* Float each project box to align them in one line */
+.project-box {
+    float: left;
+    width: 18vw; /* Adjust width to fit multiple boxes in one line */
+    margin: 1vh 1.5vw; /* Spacing between the boxes */
+    background-color: #fff;
+    padding: 2vh 1vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-box img {
+    width: 100%;
+    height: 15vh; /* Adjusted height for balance */
+    object-fit: cover;
+    margin-bottom: 2vh;
+}
+
+/* Clear floats after the project section */
+.projects-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Education & Certificates Section */
+.edu-cert-container {
+    width: 80vw;
+    margin: 5vh auto;
+    padding: 2vh 0;
+    padding-left: 2vw;
+    overflow: hidden; /* Clear floats */
+}
+
+/* Float education and certificate boxes side by side */
+.edu-box, .cert-box {
+    float: left;
+    width: 36vw; /* Adjust width to fit two boxes side by side */
+    margin: 1vh 1vw; /* Add some margin between the boxes */
+    padding: 3vh 2vw;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stack individual education and certification items */
+.edu-item, .cert-item {
+    margin-bottom: 2vh;
+    padding: 2vh 2vw;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Clear floats after the boxes */
+.edu-cert-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* My Other Works Section */
+.my-other-works-container {
+    width: 80vw; /* Full width of the container */
+    margin: 5vh auto; /* Centered with vertical margin */
+    overflow: hidden; /* Clear floats */
+}
+
+/* Blogs Section */
+.blogs-container {
+    float: left; /* Aligns the blogs section to the left */
+    width: 37.5vw; /* Set to half of the container width */
+    height: 50vh; /* Set a fixed height */
+    padding: 2vh 2vw; /* Padding inside the box */
+    background-color: #ACC6C7; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    position: relative; /* Required for positioning */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Blog list */
+.blogs-list {
+    display: flex;
+    flex-direction: column; /* Stack blog items vertically */
+    gap: 1vh; /* Space between blog items */
+}
+
+/* Individual blog item */
+.blog-item {
+    padding: 2vh 3vw; /* Padding */
+    background-color: #fff; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+    text-align: center; /* Center the text */
+}
+
+/* Blog item image */
+.blog-item img {
+    width: 100%; /* Full width of the item */
+    height: 30vh; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Contact Me Section */
+.contact-me-container {
+    float: right; /* Aligns the contact section to the right */
+    width: 37.5vw; /* Set to half of the container width */
+    padding: 2vh 2vw; /* Padding inside the box */
+    background-color: #fff; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    height: 50vh; /* Maintain same height as blogs section */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+
+/* Contact heading */
+.contact-me-container h2 {
+    text-align: center; /* Center the heading */
+    font-size: 3vh; /* Font size */
+    margin-bottom: 2vh; /* Space below the heading */
+}
+
+/* Individual contact items */
+.contacts {
+    margin-bottom: 1vh; /* Space between contact items */
+}
+
+/* Contact button style */
+.contact-btn {
+    display: flex; /* Flex layout for icon and text */
+    align-items: center; /* Center vertically */
+    padding: 10px; /* Padding inside the button */
+    background-color: #f0f0f0; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.contact-btn:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+/* Icon size and spacing */
+.icon {
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+/* Footer */
+.footer-nav {
+    background-color: cadetblue;
+    color: white;
+    width: 100vw;
+    padding: 3vh 0;
+    text-align: center;
+    
+}
+
+.footer-nav .nav-links {
+    list-style: none;
+}
+
+.footer-nav .nav-links li {
+    display: inline-block;
+    margin: 0 2vw;
+}
+
+.footer-nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+}
